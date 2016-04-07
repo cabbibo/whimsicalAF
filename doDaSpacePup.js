@@ -47,16 +47,16 @@ G.init = function(){
   G.three.stats.domElement.style.left = "0px";
   G.three.stats.domElement.style.bottom = "-30px";
   G.three.stats.domElement.style.zIndex = "999";
-  document.body.appendChild( G.three.stats.domElement );
+  //document.body.appendChild( G.three.stats.domElement );
 
 
 
   G.objectControls = new ObjectControls( G.three.camera );
 
   G.controls = new THREE.TrackballControls( G.three.camera );
-  //G.controls.noZoom = true;
-  //G.controls.noPan = true;
-  //G.controls.noRoll = true;
+  G.controls.noZoom = true;
+  G.controls.noPan = true;
+  G.controls.noRoll = true;
   G.three.camera.position.z = .3;
 
   G.doDaSpacePup();
